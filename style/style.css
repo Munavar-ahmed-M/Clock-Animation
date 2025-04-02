@@ -1,0 +1,72 @@
+body{
+    padding: 30vh;
+    background-color: rgba(230, 1, 1, 0.441);
+}
+.heading{
+    font-size: 12vmin;
+    color: yellow;
+    text-shadow: 4px 4px 0px black;
+    margin: 1em;
+    text-align: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    flex-direction: column;
+    justify-items: center;
+}
+.clock{
+    position: relative;
+    height: 50vmin;
+    width: 50vmin;
+    border-radius: 50%;
+    background-color: yellow;
+    opacity: 70%;
+    border: 2px solid black;
+    align-items: center;
+    justify-content: right;
+    padding: 20px;
+}
+.dot{
+    position: absolute;
+    background-color: rgba(99, 0, 0, 0.966);
+    height: 3vmin;
+    width: 3vmin;
+    border-radius: 50%;
+    left: 48%;
+    bottom: 48%;
+}
+.hand{
+    position: absolute;
+    height: 24vmin;
+    width: 2vmin;
+    background-color: black;
+    left:50%;
+    bottom: 50%;
+}
+.hour{
+    height: 12vmin;
+    transform-origin: bottom;
+    transform: rotate(40deg);
+    animation: rotateHour 43200s infinite linear;
+}
+.minute{
+    width: 1vmin;
+    transform-origin: bottom;
+    animation: rotate 1200s infinite linear;
+}
+.second{
+    width: 1vmin;
+    transform-origin: bottom;
+    animation: rotate 60s infinite linear;
+}
+@keyframes rotate {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+@keyframes rotateHour {
+    from { transform: translateX(-40%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
